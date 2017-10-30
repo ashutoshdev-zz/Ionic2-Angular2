@@ -1,0 +1,48 @@
+<ion-view style="" id="page2" title="Sign In">
+
+    <ion-content class="has-header" padding="true">
+
+        
+
+        <div>
+
+            <img style="display: block; margin-left: auto; margin-right: auto;" src="img/logo3.png" height="auto" width="118px">
+
+        </div>
+
+        
+
+        <form class="list" id="signIn-form1" name="form" ng-submit="form.$valid && login()" novalidate>
+
+            <label id="createProfile-input4" class="item-input input_border">
+
+                <input placeholder="Email Address" name="email" type="text" ng-model="data.email" required>
+
+            </label>
+<div ng-show="form.$submitted || form.email.$touched">
+            <span ng-show="form.email.$error.required" class="assertive">Email required</span>
+            <span ng-show="!form.email.$error.required && form.email.$error.email && form.email.$dirty" class="assertive">Enter valid Email</span>
+          
+          </div>
+            <label id="createProfile-input5" class="item-input input_border">
+
+                <input placeholder="Password" name="password" type="password" ng-model="data.password" required>
+
+            </label>
+<div ng-show="form.$submitted || form.password.$touched">
+                <div ng-show="form.password.$error.required" class="assertive">Password required</div>
+            </div>
+        
+
+            <div class="custom_padding">
+
+            <button type="submit" class="button button_purpel  button-block" style="border-radius:0px 0px 0px 0px;" id="createProfile-button2" >SIGN IN</button>
+
+            </div>
+
+        </form>
+        <button class="button button-dark button_txt button-block button-clear" id="createProfile-button3" ui-sref="menu.createProfile">New User ? <span>Sign Up</span></button>
+         <button class="button button-dark button_txt button-block button-clear" id="createProfile-button3" ui-sref="menu.forgetpassword">Forget Password ? Click Here</button>
+    </ion-content>
+
+</ion-view>

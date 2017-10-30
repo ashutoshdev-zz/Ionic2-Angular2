@@ -1,0 +1,23 @@
+<ion-view id="page4" title="Contact us">
+  <ion-content class="manual-ios-statusbar-padding has-header" padding="true">
+<div style="width: 100%; height: 35px;" class="spacer"></div>
+       <center><img class="zoomIn wow" data-wow-duration="1s" data-wow-delay="1s" width="30%" src="img/logo3.png" /></center>
+       <div style="width: 100%; height: 35px;" class="spacer"></div>       
+       <div class="list contact">
+  <label class="item item-input">   
+    <input type="text" placeholder="Name" ng-model="data.name" required>
+  </label>
+  <div class="spacer10"></div>
+ <label class="item item-input"> 
+  <input type="email" placeholder="Email" ng-model="data.email" required>
+</label>
+<div class="spacer10"></div>
+
+    <label class="item item-input">
+	<textarea  rows="8" cols="10" placeholder="Comment" ng-model="data.comment" required>
+	</textarea>
+	</label>
+        <button class="button button_purpel  button-block" style="border-radius:0;" ng-click="contact()">SUBMIT</button>  
+</div>     
+    </ion-content>    
+</ion-view>

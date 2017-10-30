@@ -1,0 +1,45 @@
+<ion-view style="" id="page5" title="Nearest Restaurants"  hide-nav-bar="true">
+
+<ion-header-bar align-title="center" id="div1" class="bar-light map_header">
+
+<div class="buttons">
+
+<button class="button button-clear icon ion-navicon hide" menu-toggle="left" style="color:#fff; display:block;"></button>
+  </div>
+
+<h1 class="title">History</h1>
+
+<div class="buttons">
+
+</div>
+
+</ion-header-bar>
+
+<ion-content class="has-header" padding="false" on-scroll="scrollEvent()" delegate-handle="scrollHandle">
+<div ng-repeat="order in orders | orderBy:'-id'">
+<div class="button button-small button-full button-assertive titlehere">week starts :{{order.created.substr(0,10)}} </br>week ends :{{order.enddate.substr(0,10)}}</div>
+<div class="restaurant_list" ng-repeat="one in order.order_items | orderBy:'-id'">
+
+<a style="display:block;" >
+
+<img style="display: block; margin-left: auto; margin-right: auto;" src="http://ashutosh.crystalbiltech.com/plait/webroot/product/{{one.product.image }}" height="auto" width="100%">
+<div class="restaurant_con">
+
+<div class="heading_txt">{{one.product.name }}</div>
+     
+<span style="font-size:11px;">{{one.dayname }} | {{one.foodtime }}</span>
+                    
+<!--button class="button button-light review" ng-click="showConfirm()" ng-show="one.dl_status==1">
+Give Review
+</button-->
+</div>
+
+</a>
+</div>
+</div>
+<!--ion-infinite-scroll ng-if="!noMore" immediate-check="false" on-infinite="loadMore()" distance="50%">
+
+</ion-infinite-scroll-->
+</ion-content>
+
+</ion-view>

@@ -1,0 +1,120 @@
+<ion-view view-title="Plaiter Campaign" hide-nav-bar="true">
+    <div class="bar bar-header">
+  <a class="button button-icon icon ion-ios-arrow-back" ui-sref="menu.weekly" ></a>
+  <div class="h1 title">Plaiter Campaign </div>
+</div>
+  <ion-content class="has-header" style="background:url(img/login.jpg) no-repeat; background-size:cover;" >
+    <div class="rank_outer">
+    	<center style="padding:20px 20px 0 20px;">
+        <h3 style="color:#9bca3b;">The Ultimate PlaiterCampign</h3>
+        <h5 style="color:#fff;">Competition runs from 20th February to 20th of March</h5>
+      </center>
+      <ul class="list card" ng-repeat="(key,rank) in ranks" ng-init="i=0">
+       <div class="item item-divider" style="background:#9bca3b; color:#fff;" >
+         <div class="row" style="padding:0;">
+           <div class="col"><h2>Rank</h2></div>
+           <div class="col"><h2>{{key+1}}</h2></div>
+         </div>
+       </div>
+       <li class="item">
+        <span class="list_name">Name</span>
+        <span class="author">{{rank.user.fname}} {{rank.user.lname}}</span>
+      </li>
+      <li class="item">
+        <span class="list_name">Points</span>
+        <span class="author">{{rank.points}}</span>
+      </li>
+<!--      <li class="item">
+        <span class="list_name">Prize</span>
+        <span class="author">Not Declared</span>
+      </li>-->
+    </ul>
+
+
+    <ul class="list card">
+     <!-- <div class="item item-divider" style="background:#9bca3b; color:#fff; text-transform:uppercase;">Top 5 :</div>
+    <li class="item">
+       <p class="brak_word">Receive 1 year free subscription + 1 year internships at Plait Food (Green Highlight for top 5 )</p>
+     </li>-->
+     <div class="item item-divider" style="background:#9bca3b; color:#fff; text-transform:uppercase;">Position 1:</div>
+     <li class="item">
+      <p class="brak_word">Internship at Plait + Life Time free LifeStyle Plus plan + R100 000 cash Grand prize</p>
+    </li>
+    <div class="item item-divider" style="background:#0033CC; color:#fff; text-transform:uppercase;">Position 2:</div>
+    <li class="item">
+      <p class="brak_word">internship + 1 year free LifeStyle Plus plan + R75 000 cash prize</p>
+    </li>
+    
+    <div class="item item-divider" style="background:#FF6600; color:#fff; text-transform:uppercase;">Position 3:</div>
+    <li class="item">
+      <p class="brak_word">internship + 6 month free LifeStyle Plus plan + R50 000 cash prize</p>
+    </li>
+    
+    <div class="item item-divider" style="background:#FFCC00; color:#fff; text-transform:uppercase;">Position 4:</div>
+    <li class="item">
+      <p class="brak_word">internship + 6 month free LifeStyle Plus plan + R25 000 cash Prize</p>
+    </li>
+    
+    <div class="item item-divider" style="background:#FF0000; color:#fff; text-transform:uppercase;">Position 5:</div>
+    <li class="item">
+      <p class="brak_word">internship + 6 month free LifeStyle  Plus plan + R10  000 cash prize</p>
+    </li>
+    
+  </ul>
+        
+        
+     <ul class="list card">
+         <li class="item">   <h2>Additional prizes</h2></li>
+     <li class="item">
+       <h4 class="brak_word">5000 points = Free 3 months Plait subscription </h4>
+     </li>
+     <li class="item">
+       <h4 class="brak_word">10 000 Points = Free 6 months Plait subscription</h4>
+     </li>
+     <li class="item">
+       <h4 class="brak_word">20 000 Points = Apple Iphone 7 + 1 year free Lifestyle plus plan</h4>
+     </li>
+     <li class="item">
+       <h4 class="brak_word">50 000 Points = Apple MacBook Pro +1 year free subscription</h4>
+     </li>
+     
+<!--     <li class="item"><h2>How referral points are calculated </h2></li>
+     <li class="item">
+       <small class="brak_word">1 LifeStyle Plan subscription = 100 Points </small>
+     </li>
+     <li class="item">
+       <small class="brak_word">1 LifeStylePLUS Plan subscription = 150 Points</small>
+     </li>-->
+  </ul>
+        
+</div>   
+</ion-content>
+</ion-view>
+
+
+<style>
+  .list_name {
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    width: 30%;
+    float: left;
+  }
+  .rank_outer li {
+    padding-top: 7px;
+    padding-bottom: 7px;
+  }
+  .author {
+   font-size: 14px;
+   white-space: normal;
+   word-wrap: break-word;
+   width: 70%;
+   float: left;
+ }
+ .brak_word{
+   white-space: normal !important;
+   word-wrap: break-word;
+   float: left;
+   width:100%;
+ }
+</style>

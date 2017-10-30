@@ -1,0 +1,42 @@
+<ion-view style="" id="page5" title="Nearest Restaurants"  hide-nav-bar="true">
+<ion-header-bar align-title="center" class="bar-light">
+    <div class="buttons">
+       <button class="button button-clear icon ion-navicon" menu-toggle="left" style="display:block; color: #000;"></button>    
+    </div>
+    	<h1 class="title" style="line-height:1;"><span class="top_title">Weekly Schedule</span> <span class="sub_title"></span></h1>
+   	   
+ </ion-header-bar>
+    <ion-content class="has-header" padding="false">
+    <div class="box blue" ng-repeat="m in k" ng-show="m.length">
+          <div class="title_outer">
+    <div class="button button-small button-full button-assertive titlehere" ng-show="m[0].product_id || m[1].product_id">{{m[0].dayname}}</div>
+    </div>     
+    <div class="restaurant_list" ng-repeat="l in m" ng-show="l.product_id">
+            <a style="display:block;">
+               <img style="display: block; margin-left: auto; margin-right: auto;" src="http://ashutosh.crystalbiltech.com/plait/webroot/product/{{l.product.image}} " height="auto" width="100%" >
+                <div class="restaurant_con">
+                <h1 class="lunch">{{l.foodtime}}</h1>
+                 
+                    <div class="teext"><h1> {{l.product.name}}   <span style="font-size: 10px;font-family: 'montserratregular';color: #ccc;">{{l.product.calorie}} calories</span></h1> 
+                    <h5>{{l.product.description.substr(0,136)}}...</h5></div>
+                </div> 
+            </a>
+             <div ng-click="cancel(l.id)" class="cutt" style="
+    width: 100%;
+    float: left;
+"><a href="#" style="
+    position: absolute;
+    right: 6px;
+    top: 4px;
+    font-size: 28px;
+    color: rgb(182, 182, 182);
+    cursor: pointer;
+"><i class="ion-ios-close"></i></a></div>
+  
+        </div>
+
+    </div>
+    <div ng-if="!gh">
+You are not subscribed for any plan .
+    </div>
+ </ion-content></ion-view>   

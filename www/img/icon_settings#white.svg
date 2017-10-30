@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="20px" height="18px" viewBox="0 0 20 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
+    <title>icon_settings#white</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Foodi" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Favorited" transform="translate(-309.000000, -32.000000)">
+            <g id="icon_settings#white" transform="translate(309.000000, 33.000000)">
+                <path d="M2.30769231,0 L2.30769231,15.7287449" id="Line" stroke="#FFFFFF" stroke-width="2" stroke-linecap="square"></path>
+                <ellipse id="Oval-94" fill="#FFFFFF" cx="2.30769231" cy="6.92307692" rx="2.30769231" ry="2.30769231"></ellipse>
+                <path d="M10,0 L10,15.7287449" id="Line" stroke="#FFFFFF" stroke-width="2" stroke-linecap="square"></path>
+                <ellipse id="Oval-94" fill="#FFFFFF" cx="10" cy="10" rx="2.30769231" ry="2.30769231"></ellipse>
+                <path d="M17.6923077,0 L17.6923077,15.7287449" id="Line" stroke="#FFFFFF" stroke-width="2" stroke-linecap="square"></path>
+                <circle id="Oval-94" fill="#FFFFFF" cx="17.6923077" cy="6.92307692" r="2.30769231"></circle>
+            </g>
+        </g>
+    </g>
+</svg>

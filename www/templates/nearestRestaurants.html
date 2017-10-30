@@ -1,0 +1,179 @@
+<ion-view  style="" id="page5" title="Nearest Restaurants"  hide-nav-bar="true">
+<ion-header-bar align-title="center" class="bar-light">
+<div class="buttons">
+<button class="button button-clear icon ion-navicon" menu-toggle="left" style="color:#000; display:block;"></button>
+</div>
+<h1 class="title" style="line-height:1;"><span class="top_title" id="place"></span></h1>
+<div class="buttons">
+<button style="margin-right:20px;" class="button button-clear" ui-sref="menu.search({id:tocart.id})" ><i class="icon"><img width="12px" src="img/icon_arrow.png" alt="" /></i></button>
+<!--button style="margin-right:5px; margin-top:3px;" class="button button-clear" ng-click="modal1.show()"><i class="icon"><img width="20px" src="img/icon_settings.png" alt="" /></i></button>
+<a ui-sref="menu.cart2({id:tocart.id,name:tocart.name,price:tocart.price,image:tocart.image})"><i class="fa fa-shopping-cart crt" aria-hidden="true" ui-sref="menu.cart2" ></i></a-->
+</div>
+
+ </ion-header-bar>
+<div class="bar bar-subheader daytitle">
+<button class="button button-light button-clear no-animation ng-show" ng-click="previous()" ng-show="slideIndex > 1" style="display:block !important;"><i class="ion-chevron-left"></i></button>
+<h2 class="title">{{day}}</h2>
+<button class="button button-light button-clear no-animation" ng-click="next()" ng-show="slideIndex != 2"><i class="ion-chevron-right"></i>
+</button>
+</div>
+
+<ion-content class="has-header has-subheader" padding="false">
+<ion-slide-box on-slide-changed="slideHasChanged($index)" style="" ng-if="days">
+<ion-slide ng-repeat="da in days" scroll="true" >
+<ion-scroll style="height: 87vh;">
+
+<form name="form" id="myForm" ng-submit="form.$valid && create_order()" novalidate>
+<div class="box blue">
+
+<div class="title_outer" ng-if="da[0].length">
+<div style="width: 95px !important;" class="button button-small button-full button-assertive titlehere">Lunch</div>
+<span class="timeer" style="right: -47px !important;">
+<div class="list">
+
+  <label class="item item-input deliverytill">
+    <div class="input-label">
+      Delivery Options
+    </div>
+    
+  </label>
+
+</div>
+
+
+</span>
+</div>
+<div class="delivery_sec" ng-if="da[0].length">
+<div class="row">
+  <div class="col">
+  <div class="deliver_selct">
+    <div class="list">
+
+  <label class="item item-input item-select" >
+      <select ng-model="data.lslot" ng-change="timechangelunch(data.lslot)">
+      <option ng-repeat="time in lunchtime" value="{{time.timeslot}}" selected=""> {{time.timeslot}}</option>
+     
+    </select>
+  </label>
+
+</div>
+</div>
+
+  </div>
+  <div class="col">
+    <div class="deliver_selct">
+   <div class="list">
+
+  <label class="item item-input item-select">
+       <select ng-model="data.laddress_id" ng-change="timechangelunch(data.laddress_id)">
+      <option ng-repeat="addr in addresses" value="{{addr.id}}" selected=""> {{addr.addresstype}}</option>
+     
+    </select>
+  </label>
+
+</div>
+</div>
+
+  </div> 
+</div>
+</div>
+
+
+<div class="restaurant_list" ng-repeat="(key,produc) in da[0]">
+<a ui-sref="menu.menuFood({id:produc.id,name:produc.name,desc:produc.description,image:produc.image})" style="display:block;">
+<img style="display: block; margin-left: auto; margin-right: auto;" src="http://ashutosh.crystalbiltech.com/plait/webroot/product/{{produc.image}}" height="auto" width="100%" >
+<div class="restaurant_con">
+<h1 style="font-size: 24px; margin: 11px; text-align: center;"> {{produc.name}}</h1> 
+<h5 style="font-size: 10px; width:100%; text-align:center;font-family:'montserratregular';color: #fff;">{{produc.description.substr(0,150)}}...</h5>
+<span>{{produc.calorie}} calories</span>
+</div>
+</a>
+ <div ng-if="produc.checked==true"><input type="radio" class="radio_select"  name="lunch{{da.id}}" ng-click="dinner(da.name,produc.id)" id="{{produc.id}}" checked="true"> </div>
+     <div ng-if="produc.checked!=true"><input type="radio" class="radio_select"  name="lunch{{da.id}}" ng-click="lunch(da.name,produc.id)" id="{{produc.id}}"> </div>
+<!--    <ion-radio type="radio" class="radio_select dummy" ng-show="showSelection" name="lunch{{da.id}}" ng-click="lunch(da.name,produc.id)" id="{{produc.id}}" ></ion-radio>-->
+ 
+<a  ng-show="show" ng-click="openModal1(produc.id,produc.name,da.name,'lunch')" class="button-positive custom">Custom</a>
+</div>
+
+
+<div class="title_outer" ng-if="da[1].length">
+<div style="    width: 95px !important;" class="button button-small button-full button-assertive titlehere">Dinner</div>
+
+<span class="timeer" style="right: -47px !important;">
+<div class="list">
+
+  <label class="item item-input deliverytill">
+    <div class="input-label">
+      Delivery Options
+    </div>
+   
+  </label>
+
+</div>
+
+
+</span>
+
+</div>
+<div class="delivery_sec" ng-if="da[1].length">
+<div class="row">
+  <div class="col">
+  <div class="deliver_selct">
+    <div class="list">
+
+  <label class="item item-input item-select" >
+        <select ng-model="data.dslot" ng-change="timechangedinner(data.dslot)">
+       <option ng-repeat="time in dinnertime" value="{{time.timeslot}}" selected=""> {{time.timeslot}}</option>
+    </select>
+  </label>
+
+</div>
+</div>
+
+  </div>
+  <div class="col">
+    <div class="deliver_selct">
+   <div class="list">
+
+  <label class="item item-input item-select">
+       <select ng-model="data.daddress_id" ng-change="addressdinner(data.daddress_id)">
+      <option ng-repeat="addr in addresses" value="{{addr.id}}" selected=""> {{addr.addresstype}}</option>
+     
+    </select>
+
+  </label>
+
+</div>
+</div>
+
+  </div> 
+</div>
+</div>
+<div class="restaurant_list"  ng-repeat="produc in da[1]">
+<a ui-sref="menu.menuFood({id:produc.id,name:produc.name,desc:produc.description,image:produc.image})" style="display:block;">
+<img style="display: block; margin-left: auto; margin-right: auto;" src="http://ashutosh.crystalbiltech.com/plait/webroot/product/{{produc.image}}" height="auto" width="100%">
+<div class="restaurant_con">
+<h1 style="font-size: 24px; margin: 11px; text-align: center;"> {{produc.name}} </h1> 
+<h5 style="font-size: 10px; width:100%; text-align: center;  font-family: 'montserratregular'; color: #fff;">{{produc.description.substr(0,150)}}...</h5>
+ <span>{{produc.calorie}} calories</span>
+</div>
+</a>
+    <div ng-if="produc.checked==true"><input type="radio" class="radio_select"  name="dinner{{da.id}}" ng-click="dinner(da.name,produc.id)" checked="true"> </div>
+     <div ng-if="produc.checked!=true"><input type="radio" class="radio_select"  name="dinner{{da.id}}" ng-click="dinner(da.name,produc.id)"> </div>
+<!--<input type="radio" class="radio_select"  ng-show="shew(showSelection,produc.checked,true)" name="dinner{{da.id}}" ng-click="dinner(da.name,produc.id)" checked="true">-->
+<a ng-click="openModal1(produc.id,produc.name,da.name,'dinner')" ng-show="show" class="button-positive custom">Custom</a>
+</div> 
+
+
+</div>
+</form>  
+<div ng-show="showSelection" class="spacer" style="width: 100%; float: left; height: 45px;"> </div>
+</ion-scroll>
+</ion-slide>
+</ion-slide-box>
+</ion-content>
+<div class="bar bar-footer" style="background: #91cb3d; padding: 0;" ng-show="showSelection">
+<input type="submit" form="myForm" class="title" value="Create Schedule" style="cursor: pointer;width: 100%;background: none;border: none !important;color: white;">
+</div>
+
+</ion-view>

@@ -1,0 +1,22 @@
+<ion-view style="" id="Customize" title="Customize" hide-nav-bar="false">
+<ion-content padding="false" style="background:url(img/fooFd.jpg) no-repeat;">
+
+<div class="top_bar" > 
+<div class="top_bar_box"> 
+<h5> Customize Plait </h5>
+<h3> {{name}} </h3>
+</div>
+
+<div class="server" ng-repeat="a in asso" > 
+<h5> {{a[0].asso_category.name}}<span>(choose one)</span> </h5>
+<div class="server_box" ng-repeat="b in a"> 
+<img src="http://ashutosh.crystalbiltech.com/plait/webroot/assoproduct/{{b.image}}" alt="{{b.image}}"/>
+<ul ng-click="custom(type,pid,b.id)"> 
+<li>  <input type="checkbox" id="rad" name="{{b.id}}" class="radio_btn1"/><label for="rad"> {{b.name}}</label> </li>
+</ul>
+</div>
+<a ui-sref="menu.Filter" class="plus_sign"> <i class="ion-ios-plus-empty"></i></a></div>
+<a class="button button-outline button-stable cart_btn" ng-click="closeModal1()">SAVE</a>
+</div>       
+</ion-content>
+</ion-view>

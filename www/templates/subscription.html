@@ -1,0 +1,41 @@
+<ion-view style="" id="page5" title="Nearest Restaurants"  hide-nav-bar="true">
+
+
+
+<ion-header-bar align-title="center" class="bar-light">
+
+    <div class="buttons">
+
+       <button class="button button-clear icon ion-navicon" menu-toggle="left" style="color:#000; display:block;"></button>
+
+
+    </div>
+
+    	<h1 class="title" style="line-height:1;"><span class="top_title">Subscription Plans</span><span class="sub_title">   </span></h1>
+
+ </ion-header-bar>
+
+    <ion-content class="has-header" padding="false">
+
+        <div class="restaurant_list restaurant_list2" ng-repeat="splan in splans">
+              <a ui-sref="menu.cart2({id:splan.id,name:splan.name,price:splan.price,image:splan.image})" class="button-positive buynow"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+            <a ng-click="plans(splan.id,splan.name,splan.description_long)" style="display:block;">
+
+               <img style="display: block; margin-left: auto; margin-right: auto;" src="img/{{splan.image}}" height="auto" width="100%" >
+
+                <div class="subcription_plans">
+
+                	<h1>{{splan.name}}</h1>
+
+                    <h5>{{splan.price}}</h5>
+
+                    <p>{{splan.description_short}}</p>
+
+                </div>
+            </a>
+
+        </div>
+
+    </ion-content>
+
+</ion-view>

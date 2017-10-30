@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
+    <title>icon_size</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Foodi" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Gallery_02" transform="translate(-340.000000, -30.000000)">
+            <g id="icon_size" transform="translate(350.000000, 40.000000) rotate(-315.000000) translate(-350.000000, -40.000000) translate(345.000000, 26.000000)">
+                <path d="M5,17.361727 L5,24.361727" id="Line" stroke="#FFFFFF" stroke-width="2" stroke-linecap="square"></path>
+                <polygon id="Rectangle" fill="#FFFFFF" transform="translate(5.000000, 23.000000) rotate(-45.000000) translate(-5.000000, -23.000000) " points="2 20 8 26 2 26"></polygon>
+                <path d="M5,10.5857864 L5,3.58578644" id="Line" stroke="#FFFFFF" stroke-width="2" stroke-linecap="square"></path>
+                <polyline id="Rectangle" fill="#FFFFFF" points="0.757359313 5 9.24264069 5 5 0.757359313 0.757359313 5"></polyline>
+            </g>
+        </g>
+    </g>
+</svg>

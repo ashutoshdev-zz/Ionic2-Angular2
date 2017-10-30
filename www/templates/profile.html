@@ -1,0 +1,71 @@
+<ion-view style="" id="page3" title="My Profile">
+
+    <ion-content class="has-header" padding="true">
+
+    
+
+    	<div class="profile">
+
+        	<div class="user_propic">
+
+            	<div class="user_img"><img src="{{User.image}}" alt="" /></div>
+
+            </div>
+
+            <h5>{{User.fname}} {{User.lname}}<a href="#"><i class="ion-compose"></i></a></h5>
+
+          
+        </div>
+
+    
+
+    
+
+        <div style="width: 283px; height: 83px;" class="spacer"></div>
+
+        
+
+        <div class="list pro_list">
+
+
+
+
+
+<a class="item" ui-sref="menu.editinfo">
+
+    <i class="pro_icon fa fa-user"></i>
+
+    Edit Info
+
+    <i class="pro_iconr ion-ios-arrow-right"></i>
+
+  </a>
+<a class="item" ui-sref="menu.changepassword">
+
+    <i class="pro_icon fa fa-user"></i>
+
+   Change Password
+
+    <i class="pro_iconr ion-ios-arrow-right"></i>
+
+  </a>
+
+ 
+
+<a class="item" ng-click="point()">
+
+    <i class="pro_icon fa fa fa-users"></i>
+
+    Referrals points:   {{points}}
+
+   
+
+  </a>
+
+</div>
+
+        
+
+    </ion-content>
+
+</ion-view>

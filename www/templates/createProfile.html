@@ -1,0 +1,77 @@
+<ion-view style="" id="page2" title="Create Profile">
+
+    <ion-content class="has-header" padding="true">
+
+        
+
+        <div>
+
+            <img style="display: block; margin-left: auto; margin-right: auto;" src="img/logo3.png" height="auto" width="118px">
+
+        </div>
+
+        
+
+        <form class="list" id="createProfile-form1" name="form" ng-submit="form.$valid && register()" novalidate>
+
+            <label id="createProfile-input2" class="item-input input_border">
+
+                <input placeholder="First Name" type="text" ng-model="data.fname" name="fname" required>
+
+            </label>
+            <div ng-show="form.$submitted || form.fname.$touched">
+                <div ng-show="form.fname.$error.required" class="assertive">First Name required</div>
+            </div>
+             <label id="createProfile-input2" class="item-input input_border">
+
+                <input placeholder="Last Name" type="text" ng-model="data.lname" name="lname" required>
+
+            </label>
+            <div ng-show="form.$submitted || form.lname.$touched">
+                <div ng-show="form.lname.$error.required" class="assertive">Last Name required</div>
+            </div>
+
+             <label id="createProfile-input3" class="item-input input_border">
+
+                <input placeholder="Phone Number" type="number" name="phone" ng-model="data.phone"  ng-pattern="/^[0-9]*$/" required>
+
+            </label>
+             <div ng-show="form.$submitted || form.phone.$touched">
+                <div ng-show="form.phone.$error.required" class="assertive">Phone Number required</div>
+                <span ng-show="form.phone.$error.pattern" class="assertive">Enter Valid Phone Number</span>
+            </div>
+
+            <label id="createProfile-input4" class="item-input input_border">
+
+                <input placeholder="Email Address" type="email" ng-model="data.email" name="email" required>
+
+            </label>
+            <div ng-show="form.$submitted || form.email.$touched">
+            <span ng-show="form.email.$error.required" class="assertive">Email required</span>
+            <span ng-show="!form.email.$error.required && form.email.$error.email && form.email.$dirty" class="assertive">Enter valid Email</span>
+          
+          </div>
+
+            <label id="createProfile-input5" class="item-input input_border">
+
+                <input placeholder="Password" type="password" ng-model="data.password" name="password" required>
+
+            </label>
+             <div ng-show="form.$submitted || form.password.$touched">
+                <div ng-show="form.password.$error.required" class="assertive">Password required</div>
+            </div>
+
+
+            <div class="privcy"> <label ng-click="modal.show()"><input style="float: left;display: block;padding-top: 7px;line-height: 0;margin-top: 4px;margin-right: 8px;" type="checkbox" ng-model="isChecked" required="">“By signing in/registering, you agree to our PRIVACY POLICY and TERMS and CONDITIONS”</label></div>
+
+        <div class="custom_padding">
+
+        <button type="submit" class="button button_purpel  button-block" style="border-radius:0px 0px 0px 0px;" id="createProfile-button2" >SIGN UP</button>
+
+        </div>
+ </form>
+        <button class="button button-dark button_txt button-block button-clear" id="createProfile-button3" ui-sref="menu.signin">Already have an account? <span>Sign in</span></button>
+
+    </ion-content>
+
+</ion-view>

@@ -1,0 +1,111 @@
+<ion-view style="" class=" " id="page4" title="Cart" hide-nav-bar="true">
+<ion-header-bar align-title="center" class="bar-positive" style="background:url(img/header.jpg) no-repeat; background-size:cover;">
+
+<div class="buttons">
+
+<button class="button button-clear icon ion-navicon" menu-toggle="left" style="color:#fff; display:block;"></button>
+
+</ion-nav-buttons>
+
+</div>
+
+<h1 class="title" style="line-height:1;"><span class="top_title">Cart</span> <span class="sub_title"></span></h1>
+
+
+
+
+</ion-header-bar>
+
+
+<ion-content padding="true" style="background:#eeeef3; padding-top:0;" class="manual-ios-statusbar-padding has-footer">
+
+<div class="list" ng-hide="hide">
+
+<div class="item cart_item item-thumbnail-left item-icon-right" href="#">
+<div class="img_cart">
+<img src="http://ashutosh.crystalbiltech.com/plait/webroot/plan/{{cart.image}}">
+</div>
+<div class="plan">
+<h2>{{cart.name}}</h2></div>
+<div class="month">
+<p>Subscribe for month</p>
+</div>
+
+<!--<p>Month</p>-->
+<div class="priceqty">
+<span class="price_cart"></span><span></span><i class="eq"></i><span class="addcart">R {{cart.price}} </span>
+</div>
+
+<!--button class="button icon-left button-clear ion-ios-close button-small remove_icon" ng-click="delete()"></button-->
+</div>
+
+<a class="item item-icon-left del">
+Delivery
+<span class="item-note">
+Free
+</span>
+</a>
+<a class="item item-icon-left del">
+Discount
+<span class="item-note" id="discount">
+-0
+</span>
+</a>
+<a class="item item-icon-left del" >
+Subtotal
+<span class="item-note" id="subtotal">
+R {{cart.price}}
+</span>
+</a>
+
+      
+
+</div>
+<form name="pr" ng-submit="pr.$valid && promocode()"
+<div class="promocod" ng-hide="hide">
+<h2>Enter promo code</h2>
+<div class="row promo">
+<div class="col code" style="padding:2px;"><input type="text" ng-model="data.promo" name="quantity" placeholder="Code" required=""></div>
+
+</div>
+</div> 
+
+
+
+<button class="button button-full button-dark btn_grn" ng-hide="hide">
+
+Submit
+
+</button>
+</form>
+<form name="rf" ng-submit="rf.$valid && refer()">
+<div class="promocod" ng-hide="showr">
+<h2>Enter Referral code</h2>
+<div class="row promo">
+<div class="col code" style="padding:2px;"><input type="text" ng-model="data.refer" name="quantity" placeholder="Code" required=""></div>
+
+</div>
+</div> 
+
+
+
+<button class="button button-full button-dark btn_grn" ng-hide="showr">
+
+Submit
+
+</button>
+</form>
+<div ng-hide="!hide"> Nothing in the cart</div>
+
+
+
+</ion-content>
+
+
+<div class="bar bar-footer">
+<div class="button-bar button-clear  bar-positive">
+<a class="button  button-clear" ui-sref="menu.addaddr">Check out</a>
+
+</div>
+</div>
+</ion-view>

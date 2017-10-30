@@ -1,0 +1,41 @@
+<ion-view style="" class=" " id="page4" title="" hide-nav-bar="true">
+
+<ion-header-bar align-title="center" id="div1" class="bar-light map_header">
+  <div class="buttons">
+    <button ng-click="$ionicGoBack()" class="button back-button buttons  button-clear header-item" style=""><i class="icon ion-android-arrow-back"></i></button>
+  </div>
+  <h1 class="title">Change Address</h1>
+  
+</ion-header-bar>
+
+<ion-content padding="true" style="background: url(img/signup.jpg) no-repeat center;background-size:cover; top:0;" class="manual-ios-statusbar-padding">
+       
+       <div class="s" style="height:3vh;"> </div>
+     <div class="address" ng-repeat="addr in addres">
+   <div class="address_sec">
+   <!--input class="magic-radio" type="radio" name="radio" id="{{addr.id}}" value="option">
+  <label for="{{addr.id}}">  </label-->
+   <div class="headding_add">
+   
+  <span style="color: rgb(255, 255, 255); font-size: 16px; font-weight: 600; "> {{addr.first_name}} {{addr.last_name}} </span><!--a href="#" ng-click="delete(addr.id)"><i class="ion-ios-close"></i></a-->
+        
+   </div>
+   <p style="color:#fff;margin-bottom: 0;">{{addr.address1}} {{addr.address2}} , {{addr.city}} {{addr.state}} ({{addr.country}}) </p>
+         <p class="tel2" style="margin-bottom:0;margin-top: 0;"><a href="#" style="color:#fff; text-decoration:none; margin-bottom:0;">{{addr.phone}}</a></p>
+              <div class="headding_add1">
+               <p class="tel2" style="margin-bottom:0;margin-top: 0;"><a href="#" style="color:#fff; text-decoration:none;">{{addr.addresstype}}</a></p>
+          <a href="#" ui-sref="menu.editaddr({id:addr.id})" class="edit_btn">Edit</a>
+                </div>
+   </div>
+    
+    </div>
+
+      <div class="s" style="height:3vh; width:100%; float:left;"> </div>
+      <div class="but_addr" style=" margin: 0 auto; width: 50%;">  
+     
+       <a ui-sref="menu.newaddresses2" class="button_purpel" style="width:100%;"> ADD NEW ADDRESS</a> 
+       </div>   
+      <div class="spacer" style="height:3vh;"></div>
+    </ion-content>
+   
+</ion-view>

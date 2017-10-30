@@ -1,0 +1,43 @@
+<ion-view style="" id="page2" title="Edit Info">
+    <ion-content class="has-header" padding="true">
+    
+    	<div class="profile">
+        	<div class="user_propic">
+            	<div class="user_img"><img src="{{User.image}}" ng-click="getPicture()" alt="" /></div>
+            </div>
+            <h5><a href="#" ng-click="getPicture()"><i class="ion-compose"></i><span class="edit_pro">Edit Profile Pic</span></a></h5>
+        </div>
+    
+    
+        <div style="width: 283px; height: 83px;" class="spacer"></div>
+  <form name="form" ng-submit="form.$valid && edit()" novalidate>       
+        <div class="list">
+  <label class="item item-input">
+    <input type="text" name="fname" placeholder="First Name" ng-model="data.fname" required>
+  </label>
+<div ng-show="form.$submitted || form.password.$touched">
+<div ng-show="form.fname.$error.required" class="assertive">First Name required</div>
+            </div>
+  <label class="item item-input">
+    <input type="text" name="lname" placeholder="Last Name" ng-model="data.lname" required>
+  </label>
+  <div ng-show="form.$submitted || form.password.$touched">
+<div ng-show="form.lname.$error.required" class="assertive">Last Name required</div>
+            </div>
+  <label class="item item-input">
+    <input type="number" name="mobile" type placeholder="Phone Number" ng-model="data.phone" required>
+  </label>
+  <div ng-show="form.$submitted || form.password.$touched">
+<div ng-show="form.mobile.$error.required" class="assertive">Mobile no required</div>
+            </div>
+  
+
+        <button type="submit" class="button button_purpel  button-block" style="border-radius:0;">SAVE</button>
+
+  
+</div>
+</form>
+        
+        
+    </ion-content>
+</ion-view>

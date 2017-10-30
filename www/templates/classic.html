@@ -1,0 +1,76 @@
+<ion-view style="" id="page5" title="Nearest Restaurants"  hide-nav-bar="true">
+
+
+<ion-header-bar align-title="center" class="bar-positive" style="background:url(img/header.jpg) no-repeat; background-size:cover;">
+
+    <div class="buttons">
+
+       <button class="button button-clear icon ion-navicon" menu-toggle="left" style="color:#fff; display:block;"></button>
+
+    </ion-nav-buttons>
+
+    </div>
+
+    	<h1 class="title" style="line-height:1;"><span class="top_title">{{splan.plan}} Plan</span><span class="sub_title">   </span></h1>
+
+   	<div class="buttons">
+
+   		<!--<button style="margin-right:20px;" class="button button-clear" ng-click="modal.show()"><i class="icon"><img width="12px" src="img/icon_arrow.png" alt="" /></i></button>
+
+        <button style="margin-right:5px; margin-top:3px;" class="button button-clear" ng-click="modal1.show()"><i class="icon"><img width="20px" src="img/icon_settings.png" alt="" /></i></button>-->
+
+       <!-- <button style="margin-top:3px;" class="button button-clear"><i class="icon"><img width="20px" src="img/icon_search.png" alt="" /></i></button>-->
+
+ 	</div>
+
+    
+
+ </ion-header-bar>
+
+	
+
+    <ion-content class="has-header" padding="false" style="background:url(img/slide4.jpg) no-repeat; background-size:cover;">
+
+    
+
+    
+
+    <div class="list card" >
+
+   
+
+      <div class="item item-body">
+
+        <h2>{{splan.plan}}</h2>
+
+        <p>
+
+         {{splan.desc}}
+
+        </p>
+
+      
+
+      </div>
+
+    <a ui-sref="menu.nearestRestaurants({id:splan.id})" class="button button-full button-dark btn_grn">
+
+  Next
+
+</a>
+
+    </div>
+
+    
+
+   
+
+       
+
+
+
+    </ion-content>
+
+    
+
+</ion-view>

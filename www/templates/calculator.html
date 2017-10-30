@@ -1,0 +1,115 @@
+<ion-view view-title="Calorie Calculator" hide-nav-bar="true">
+    
+<div class="bar bar-header">
+  <a class="button button-icon icon ion-ios-arrow-back" ui-sref="menu.weekly"></a>
+  <div class="h1 title">Calorie Calculator</div>
+</div>
+    
+  <ion-content padding="true" class="has-header" style="background:url(img/bg.jpg) no-repeat; background-size: cover;" >
+    
+       <div class="calculator card">
+           <center><h3 class="header_cal">Calorie Calculator</h3></center>
+        	<div class="cal_tble">
+            	<div class="row">
+                       <div class="col col-33"><span>Age:</span></div>   
+                      <div class="col">
+                       <input class="text_value" id="age" type="text">
+                      </div>
+                      <div class="col col-33"><span style="text-align:center;">Years</span></div>
+				</div>
+                
+                <div class="row">
+                       <div class="col col-33"><span>Gender:</span></div>   
+                      <div class="col col-33">
+                        <input type="radio" id="gen" name="gender" value="male"> Male
+                      </div>
+                      <div class="col col-33">
+                       <input type="radio" id="gen" name="gender" value="female" checked> Female
+                      </div>
+				</div>
+                
+
+<!--                <div class="row">
+                      <div class="col col-33"><span>Height:</span> </div>
+                      <div class="col">
+                       	<select style="width: 100%;border: 1px solid #ccc;padding: 9px;" id="foot">
+                          <option ng-repeat="i in [1,2,3,4,5,6,7,8,9]">{{i}} '</option>
+                    	</select>
+                      </div>
+                      
+                      <div class="col">
+                             <select style="width: 100%;border: 1px solid #ccc;padding: 9px;" id="inch">
+                                  <option ng-repeat="i in [1,2,3,4,5,6,7,8,9,10,11,12]">{{i}} "</option>
+                    		</select>
+                      </div>
+                </div>-->
+
+                <div class="row">
+                <div class="col col-33"><span>Cms:</span></div>
+                  <div class="col">
+                    <input class="text_value" type="text"  placeholder="In cm"  id="cen">
+                  </div>
+                </div>
+                
+                <div class="row">
+                  <div class="col col-33"><span>Weight:</span></div>
+                  <div class="col">
+                        <input type="number" name="weight" placeholder="In Kilogram" id="weight">
+                  </div>
+                </div>
+
+                <div class="row">
+                 <div class="col col-33"><span>Activeness:</span></div>
+                  <div class="col">
+                         
+                    <select style="width: 100%;border: 1px solid #ccc;padding: 9px;" id="loa">
+                      <option ng-repeat="(key,val) in active" value="{{key+1}}">{{val}}</option>
+                      
+                    </select>
+                
+                  </div>
+                </div>
+
+            </div>
+            <center><button style="margin: 10px 0px; background:#9bca3b;"  ng-click="cc()" class="button button-balanced">
+              Calculate The Calorie
+            </button></center>
+            
+        
+       </div> 
+      <div class="result card">
+      <div class="row header ">
+          <div class="col-33">Calorie:</div>
+          <div class="col-33"><input type="text" id="rc" class="grmmm" style="margin-top: -7px;background: none;" size="15" readonly></div>
+          <div class="col-33 grm">grams per day</div>
+      </div>
+        <div class="row header">
+          <div class="col-33">Fat:</div>
+          <div class="col-33"><input type="text" id="rf" class="grmmm" size="10" style="margin-top: -7px;background: none;" readonly></div>
+          <div class="col-33 grm">grams per day</div>
+        </div>
+      <div class="row header">
+          
+          <div class="col-33">Protein:</div>
+          <div class="col-33"><input type="text" id="rp" class="grmmm"  size="10"  style="background: none;" readonly></div>
+          <div class="col-33 grm">grams per day</div>
+          
+     </div>
+      <div class="row header">
+          
+          <div class="col-33">Carbohydrate:</div>
+          <div class="col-33"><input type="text" id="rh" class="grmmm" style="background: none;" size="10" readonly></div>
+          <div class="col-33 grm">grams per day</div>
+          
+      </div>
+     <div class="row header">
+         
+         <div class="col-33">Alcohol:</div>
+         <div class="col-33"><input type="text" class="grmmm" id="ra" style="background: none;" size="10" readonly></div>
+         <div class="col-33 grm">grams per day</div>
+    </div>
+      </div>
+         
+  </ion-content>
+</ion-view>
+

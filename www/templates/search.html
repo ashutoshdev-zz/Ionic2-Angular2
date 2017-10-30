@@ -1,0 +1,41 @@
+<ion-modal-view>
+
+     <div class="bar bar-header item-input-inset" style="background:none; border:none; position: relative;">
+
+  <label class="item-input-wrapper" style="background:none; border-bottom:1px solid #ddd; border-radius:0; padding: 0; ">
+<form style="width:100%;" class="search_frm search_frm-pg" ng-submit="place()">
+<div class="serch_bx">
+    <input type="text" g-places-autocomplete placeholder="Your address" options="autocompleteOptions" ng-model="data.address" placeholder="Search"  details="details" >
+    <div class="secrh_icn"> <button type="submit"><i class="icon ion-search small"></i></button></div>
+   </div> 
+   
+</form>
+ 
+</label>
+  <!--button class="icon placeholder-icon close_icon" ng-click = "closeModal()" style="position: absolute;  top: 5px;   right: 20px;   z-index: 999;"><img style="margin-top:10px;" src="img/delete.png"></button-->
+ 
+</div>
+
+    <ion-content class="has-header" padding="true" style="background:#fefefe;">
+
+      <div class="padding main" ng-click="location()">
+
+      <div class="list"  >
+
+      <div class="list_outer">
+
+      <span class="deduct_location" ><i class=""><img src="img/detect.png" ></i></span>
+
+		 <span class="detect" >DETECT MY LOCATION</span>
+
+      </div>
+      </div>
+<a class="search_item" href="#"  ng-repeat="location in locations" ng-click="kl(location.description)">
+       {{location.description}}
+      </a>
+</div>
+
+    </ion-content>
+
+  </ion-modal-view>
+

@@ -1,0 +1,159 @@
+<ion-side-menus style="" enable-menu-with-back-views="false">
+
+    <ion-side-menu-content>
+
+        <ion-nav-bar class="bar-stable abc">
+
+            <ion-nav-back-button></ion-nav-back-button>
+
+            <ion-nav-buttons side="left">
+
+                <button class="button button-icon button-clear ion-navicon" menu-toggle="left"></button>
+
+            </ion-nav-buttons>
+
+        </ion-nav-bar>
+
+        <ion-nav-view name="side-menu21"></ion-nav-view>
+
+    </ion-side-menu-content>
+
+    <ion-side-menu side="left" id="side-menu21">
+
+        <ion-content padding="false" class="side-menu-left has-footer" scroll="true">
+
+            <div class="profile_user" style="background:url(img/menubg.jpg) no-repeat; background-size:cover;">
+
+                <div class="pro_pic">
+
+                    <a menu-close ><img id="image" src="{{User.image}}"></a>
+
+                </div>
+
+                <div class="profile_list" href="#" style="height:150px; background:none;">
+
+                    <h2 id="name">{{User.fname}} {{User.lname}}</h2>
+                    <h5 id="name">{{User.mine}} </h5>
+
+                </div>
+
+                <button menu-close class="button-clear sett_btn" ui-sref="menu.profile"><img src="img/settings.png"></button>
+            </div>
+
+            <ion-list id="menu-list1">
+                <div class="padding"  menu-close>
+                    <span class="text"> <i class="ion-ios-calendar-outline"></i><h4 id="plan" >{{plan}}</h4></span>
+
+                    <span ng-show="expires">
+                        <i class="ion-ios-calendar-person" ></i> Expire on date - {{expires}} </span><br/>
+
+                </div>
+                <!--div class="padding tableres" ng-show="expires">
+                        <span ng-show="expires"><i class="ion-ios-calendar-person" ></i> Referral Code -{{User.mine}}  </span>
+                </div-->
+                <ion-item style="border:none;" menu-close=""  id="menu-list-item1" class="item-icon-left slide_nav" ng-show="User.plan_id"  ui-sref="menu.nearestRestaurants({id:User.plan_id})" ui-sref-opts="{reload: true, notify: true}">
+
+                    View menu
+
+                    <i class="icon_new fa fa-eye"></i>
+
+                </ion-item>
+                <ion-item style="border:none;" menu-close="" ui-sref="menu.weekly" id="menu-list-item1" class="item-icon-left slide_nav">
+
+                    Weekly Schedule
+
+                    <i class="icon_new fa fa-calendar-check-o"></i>
+
+                </ion-item>
+                <ion-item style="border:none;" menu-close="" ui-sref="menu.subscription"  id="menu-list-item1" class="item-icon-left slide_nav" ng-show="User.plan_id" ui-sref-opts="{reload: true, notify: true}">
+
+                    Change Subscription
+
+                    <i class="icon_new fa fa-credit-card-alt"></i>
+
+                </ion-item>
+
+                <ion-item style="border:none;" menu-close="" ui-sref="menu.rank" id="menu-list-item1" class="item-icon-left slide_nav">
+
+                    Plaiter Campaign
+
+                    <i class="icon_new fa fa-gift"></i>
+
+                </ion-item>
+                <ion-item style="border:none;" menu-close="" ui-sref="menu.history" id="menu-list-item1" class="item-icon-left slide_nav">
+
+                    Order History
+
+                    <i class="icon_new fa fa-history"></i>
+
+                </ion-item>
+
+                <ion-item style="border:none;" menu-close=""  id="menu-list-item1" class="item-icon-left slide_nav" ui-sref="menu.calculator">
+
+                    Calorie Calculator
+
+                    <i class="icon_new ion-ios-calculator"></i>
+
+                </ion-item>
+
+
+
+                <ion-item style="border:none;" menu-close="" ui-sref="menu.signin" ng-hide="id" id="menu-list-item1" class="item-icon-left slide_nav">
+
+                    Sign in
+
+                    <i class="icon_new ion-log-in"></i>
+
+                </ion-item>
+
+
+
+                <ion-item style="border:none;" menu-close="" ui-sref="menu.checkout3" id="menu-list-item1" class="item-icon-left slide_nav">
+
+                    Change Delivery
+
+                    <i class="icon_new fa fa-motorcycle"></i>
+
+                </ion-item>
+
+                <ion-item style="border:none;" menu-close="" ui-sref="menu.about" id="menu-list-item1" class="item-icon-left slide_nav">
+
+                    About
+
+                    <i class="icon_new ion-person-stalker"></i>
+
+                </ion-item>
+                <ion-item style="border:none;" menu-close="" ui-sref="menu.invitefriends" id="menu-list-item1" class="item-icon-left slide_nav">
+
+                    Invite Friends
+
+                    <i class="icon_new ion-person-stalker"></i>
+
+                </ion-item>
+                <ion-item style="border:none;" menu-close="" ng-click="logout()" ng-show="id" id="menu-list-item1" class="item-icon-left slide_nav " >
+
+                    Sign out
+
+                    <i class="icon_new ion-log-out"></i>
+
+                </ion-item> 
+
+
+            </ion-list>
+        </ion-content>
+
+        <div class="bar bar-footer" style="background: #91cb3d; padding: 0;">
+            <div class="mdicon"  menu-close>
+
+                <a ng-click="website('http://twitter.com')"><i class="fa fa-twitter md" aria-hidden="true"></i></a>
+                <a ng-click="website('http://facebook.com')"><i class="fa fa-facebook md" aria-hidden="true"></i></a>
+                <a ng-click="website('http://instagram.com')"><i class="fa fa-instagram md" aria-hidden="true"></i></a>
+                <a ng-click="website('http://linkedin.com')"><i class="fa fa-linkedin md" aria-hidden="true"></i></a>
+
+            </div>
+        </div>
+
+    </ion-side-menu>
+
+</ion-side-menus>
+

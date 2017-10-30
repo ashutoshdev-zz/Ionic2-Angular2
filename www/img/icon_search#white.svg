@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="19px" height="19px" viewBox="0 0 19 19" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
+    <title>icon_search#white</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Foodi" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Discover" transform="translate(-341.000000, -31.000000)" stroke="#FFFFFF" stroke-width="2">
+            <g id="icon_search#white" transform="translate(339.000000, 30.000000)">
+                <ellipse id="Oval-233" transform="translate(9.454416, 9.054416) rotate(-45.000000) translate(-9.454416, -9.054416) " cx="9.45441559" cy="9.05441559" rx="6.4" ry="6.4"></ellipse>
+                <path d="M16.8083261,13.6083261 L16.8083261,19.2083261" id="Line" stroke-linecap="square" transform="translate(16.808326, 16.408326) rotate(-45.000000) translate(-16.808326, -16.408326) "></path>
+            </g>
+        </g>
+    </g>
+</svg>

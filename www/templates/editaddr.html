@@ -1,0 +1,70 @@
+<ion-view id="page4" title="Cart" hide-nav-bar="true">
+
+  <ion-header-bar align-title="center" id="div1" class="bar-light map_header">
+    <div class="buttons">
+      <button ng-click="$ionicGoBack()" class="button back-button buttons  button-clear header-item" style=""><i class="icon ion-android-arrow-back"></i></button>
+    </div>
+    <h4 style="color:#fff; text-align:center; width:82%; float:left;">Enter Details</h4>
+
+  </ion-header-bar>
+
+  <form name="form" ng-submit="form.$valid && edit()" novalidate>
+    <ion-content scroll="true" padding="false" style="background: url(img/signup.jpg) no-repeat center;background-size:cover; top:0; padding-top:44px;  " class="manual-ios-statusbar-padding">
+      <h4 style="color:#fff; text-align:center;"></h4>
+      
+      <div class="spacer" style="height:1vh;"> </div>
+      <div class="padding details_1">
+
+        <div class="list list-inset billing_add">
+          <label class="item item-input ">
+            <input style="color:#fff;" type="text" name="firstname" placeholder="First Name" ng-model="data.fname" required>
+          </label>
+          <div ng-show="form.$submitted">
+            <div ng-show="form.firstname.$error.required" class="assertive alert">Enter First Name</div>
+          </div>
+          <label class="item item-input">
+            <input style="color:#fff;"  type="text" name="lastname" placeholder="Last Name" ng-model="data.lname"  required>
+          </label>
+          <div ng-show="form.$submitted">
+            <div ng-show="form.lastname.$error.required" class="assertive alert">Enter Last Name</div>
+          </div>
+          <label class="item item-input ">
+            <input style="color:#fff;"  type="text" name="street" placeholder="Street" ng-model="data.street" required>
+          </label>
+          <div ng-show="form.$submitted">
+            <div ng-show="form.street.$error.required" class="assertive alert">Enter Street</div>
+          </div>
+          <label class="item item-input ">
+            <input style="color:#fff;" name="city" type="text" placeholder="City" ng-model="data.city" required>
+            <!--i class="icon ion-ios-navigate placeholder-icon" style="color:#91cb3d;"></i-->
+          </label>
+          <div ng-show="form.$submitted">
+            <div ng-show="form.city.$error.required" class="assertive alert">Enter city name</div>
+          </div> 
+          <label class="item item-input ">
+          <input style="color:#fff;" name="mobile"  type="number" placeholder="Mobile Number" ng-minlength="5" ng-pattern="/^[0-9]*$/" ng-model="data.phone" required>
+          </label>
+          <div ng-show="form.$submitted">
+            <div ng-show="form.mobile.$error.required" class="assertive alert">Enter Mobile number</div>
+            <div ng-show="form.mobile.$error.pattern" class="assertive alert">Enter valid Mobile number</div>
+            <div ng-show="form.mobile.$error.minlength" class="assertive alert">Enter valid Mobile number</div>
+          </div> 
+          <label class="item item-input ">
+            <input style="color:#fff;" type="text" name="type" placeholder="Address type Ex:home / billing;" ng-model="data.type" required>
+          </label>
+          <div ng-show="form.$submitted">
+            <div ng-show="form.type.$error.required" class="assertive alert">Enter Address type</div>
+          </div>
+          <div class="spacer " style="width: 100%; float: left; height: 80px;"> </div>
+
+        </div>
+      </div>
+    </ion-content>       
+    <div class="bar bar-footer" style="background:#91cb3d ;">
+      <div class="button-bar button-clear  bar-positive">
+        <button class="button  button-clear" type="submit" >Next</button>
+      </div>
+    </div>   
+  </form> 
+
+</ion-view>

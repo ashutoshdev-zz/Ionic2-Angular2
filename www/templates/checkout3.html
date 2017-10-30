@@ -1,0 +1,54 @@
+<ion-view id="page4" title="Cart" hide-nav-bar="true">
+
+<ion-header-bar align-title="center" id="div1" class="bar-light map_header">
+  <div class="buttons">
+    <button class="button button-clear icon ion-navicon hide" menu-toggle="left" style="color:#fff; display:block;"></button>
+  </div>
+
+</ion-header-bar>
+
+
+<ion-content padding="false" style="background: url(img/signup.jpg) no-repeat center;background-size:cover; top:0; padding-top:44px;" class="manual-ios-statusbar-padding">
+         <div class="spacer" style="height:3vh;"> </div>
+      
+        
+        
+        <div class="padding details_2">
+        <div class="padding">
+         <h4 style="color: rgb(255, 255, 255); margin: 0% 0px 1.5% ! important;">{{addres[0].first_name}} {{addres[0].last_name}}</h4>
+            	<p>{{addres[0].address1}}</p>
+                <p>{{addres[0].city}} </p>
+                <p>{{addres[0].country}} </p>
+                <p>{{addres[0].phone}}</p>
+                
+            </div>
+            
+            
+        
+        </div>
+    <!--    <a ui-sref="menu.changeaddress" style="color: rgb(255, 255, 255); width: 100%; text-align: center; float: left; margin: 2% 0px 0px ! important;"> VIEW ALL ADDRESSES   </a> <br />-->
+        
+        <div class="spacer" style="height:6vh;"> </div>
+        
+      <div class="but_addr">  
+      <a ui-sref="menu.changeaddress2" class="button_purpel"> VIEW ALL   </a> 
+       <a ui-sref="menu.newaddresses2" class="button_purpel"> ADD NEW</a> 
+       </div>  
+      <div class="spacer" style="height:29vh;"> </div>  
+        <div class="ck_slider_pager"> 
+        	<ul> 
+            	<li class="active"> <span><b>1</b></span></li>
+                <li> <span></span><b></b></li>
+                <li> <span></span></li>
+            </ul>
+        </div>
+        
+        
+    </ion-content>
+    
+    <div class="bar bar-footer" style="background:#91cb3d ;">
+    <div class="button-bar button-clear  bar-positive">
+  <a class="button  button-clear" ui-sref="menu.menu" style=" line-height: 26px;">Always free</a>
+</div>
+</div>
+</ion-view>
